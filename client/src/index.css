@@ -1,13 +1,60 @@
+@import url("./utils/icomoon/iconfonts.css");
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* =================================================================== 
+
+    Running 1 style sheet as this app does not have scope to be large.
+
+  ====================================================================*/
+
+.Startup {
+  text-align: center;
+}
+
+.Startup-logo {
+  height: 20vmin; /* dropped size down from 40vmin - thought it was too large.  */
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Startup-logo {
+    animation: Startup-logo-spin infinite 20s linear;
+  }
+}
+
+.Startup-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+@keyframes Startup-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =================================================================== */

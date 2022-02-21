@@ -1,20 +1,23 @@
 {
-  "name": "catwiki",
+  "name": "kitty-wiki",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A website for cat lovers to review the different breeds of domestic cats and their characteristics.",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd client && npm install && npm run build"
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.2"
-  },
-  "engines": {
-    "node": "v17.4.0"
+  "keywords": [
+    "cats",
+    "cat pictures",
+    "cat wiki",
+    "cat breeds"
+  ],
+  "author": "Mark Watson",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.0.0"
   }
 }

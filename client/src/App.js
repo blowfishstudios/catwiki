@@ -1,24 +1,20 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./index.css";
 
-function App() {
-  const [data, setData] = React.useState(null);
+import Startup from "./pages/Startup";
+import NoMatch from "./pages/NoMatch";
 
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
+const App = () => {
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{!data ? "Loading..." : data}</p>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Startup} />
+        <Route component={NoMatch} />
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
