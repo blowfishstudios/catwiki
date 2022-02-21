@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import BreedSearch from "../components/BreedSearch";
+// import BreedSearch from "../components/BreedSearch";
 import LoadingSpinner from "../components/Loading";
 
 const Landing = () => {
@@ -25,7 +25,7 @@ const Landing = () => {
   ) : (
     <>
       <div className="homepage" style={{backgroundColor:"black"}}>
-        <BreedSearch names={names} />
+        {/* <BreedSearch names={names} /> */}
       </div>
     </>
   );
