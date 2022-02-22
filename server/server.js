@@ -17,6 +17,19 @@ app.get("/api", cors(), (req, res) => {
   const allData = res.json(kittyData);
 });
 
+app.get("/api/:name", cors(), (req, res) => {
+  // getting selected breed name this way as req.params returns "service-worker.js"
+  const url = req.rawHeaders[13];
+  const breed = url
+    .slice(url.lastIndexOf("/") + 1, url.length)
+    .replace(/%20/g, " ");
+
+  console.log(breed);
+
+  // find the data array for a specific breed
+  res.json(kittyData[kittyData.findIndex((item) => item.name === breed)]);
+});
+
 // if in production then serve client/build as static assets
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
@@ -36,7 +49,6 @@ app.listen(PORT, () => {
       `\n------------------------\n`
   );
 });
-
 
 /*
 * Instead of making multiple additional API calls outside of the app, I decided to grab the data

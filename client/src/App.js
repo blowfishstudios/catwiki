@@ -4,6 +4,7 @@ import "./index.css";
 
 import Startup from "./pages/Startup";
 import Landing from "./pages/Landing";
+import BreedInfo from "./pages/BreedInfo";
 import NoMatch from "./pages/NoMatch";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Startup} />
         <Route exact path="/api" component={Landing} />
+        <Route path="/:name" component={BreedInfo} />
         <Route component={NoMatch} />
       </Switch>
     </Router>
