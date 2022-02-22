@@ -20,7 +20,8 @@ code {
 
 /* ============================================================================ 
 
-    Running 1 style sheet as this app does not have scope to be large.
+    Running 1 style sheet as this app does not have scope to need 
+    multiple style sheets.
 
   =============================================================================*/
 
@@ -98,16 +99,19 @@ div.header {
   padding: 0.5rem 0;
 }
 
-/* = Dropdown Menu ========================================================= */
+/* = Dropdown Menu ========================================================= 
+ * Thanks to:
+ * https://letsbuildui.dev/articles/building-a-dropdown-menu-component-with-react-hooks
+ */
 
-.homepage{
-background-image: url("./assets/header.jpg");
-background-color: #cccccc;
-height: 38rem;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
+.homepage {
+  background-image: url("./assets/header.jpg");
+  background-color: #cccccc;
+  height: 38rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .drop-container {
@@ -199,3 +203,128 @@ img.menu-image {
   padding: 1rem;
   display: block;
 }
+
+/* = Dashboard ============================================================= 
+ * Thanks to:
+ * https://github.com/ashleypean/cat-wiki
+ */
+
+div.breed-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  margin: 2rem 0 1rem 0;
+  padding: 0 2rem;
+}
+
+div.breed-data div.photo-container {
+  width: 12rem;
+  height: 12rem;
+  position: relative;
+  align-self: center;
+  margin: 0 0 2rem;
+}
+
+div.breed-data div.photo-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: -5px 10px 20px 10px rgba(0, 0, 0, 30%);
+}
+
+div.breed-data div.text {
+  margin: 0 0 1.4rem 0;
+}
+
+div.breed-data div.text h4 {
+  font-weight: 550;
+  font-size: 2rem;
+  margin: 0;
+}
+
+div.breed-data div.text p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+div.breed-data div.info {
+  margin: 2rem 0;
+}
+
+div.breed-data div.info p {
+  font-size: 1rem;
+}
+
+div.breed-data div.info span {
+  font-weight: 600;
+}
+
+div.rating {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+div.rating span.stat {
+  font-weight: 600;
+  font-size: 0.8rem;
+  width: 35%;
+}
+
+div.breed-data div.info div.rating-container {
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+div.breed-data div.info div.rating-container div.brown-bg {
+  display: inline-block;
+  height: 0.45rem;
+  width: 1rem;
+  background-color: #544439;
+  border: 1px solid #544439;
+  border-radius: 12px;
+  margin: 0 0.2rem;
+}
+
+div.breed-data div.info div.rating-container div.no-bg {
+  display: inline-block;
+  height: 0.45rem;
+  width: 1rem;
+  background-color: #e0e0e0;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  margin: 0 0.2rem;
+}
+
+@media screen and (min-width: 700px) {
+  div.breed-data {
+    flex-direction: row;
+  }
+
+  div.breed-data div.photo-container {
+    align-self: flex-start;
+    width: 15rem;
+    height: 15rem;
+  }
+
+  div.breed-data div.right {
+    width: 60%;
+  }
+
+  div.breed-data div.right div.text {
+    width: 80%;
+  }
+
+  div.rating {
+    width: 60%;
+  }
+}
+
+/* ========================================================================= 
+============================================================================*/
