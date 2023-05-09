@@ -1,0 +1,35 @@
+div.footer {
+  background-color: black;
+  color: white;
+  margin: 7rem 0 0;
+  position: relative;
+  bottom: 0;
+  padding: 1rem 1.4rem;
+  border-radius: 42px 42px 0 0;
+}
+
+div.footer img {
+  width: 25%;
+}
+
+div.footer p {
+  font-size: 75%;
+  text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+  div.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+  }
+
+  div.footer img {
+    width: 15%;
+  }
+
+  div.footer p {
+    font-size: 70%;
+  }
+}

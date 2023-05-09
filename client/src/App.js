@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-
+import LoadingPage from "./components/LoadingPage/LoadingPage";
+import Footer from "./components/Footer/Footer";
 function App() {
   const [data, setData] = React.useState(null);
 
@@ -13,11 +13,11 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{!data ? "Loading..." : data}</p>
-      </header>
+      <LoadingPage />
+
+      <Footer />
     </div>
+
   );
 }
 
