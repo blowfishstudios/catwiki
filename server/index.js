@@ -8,7 +8,7 @@ const app = express();
 // Have Node serve the files for our built React app
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-const router = require('./routes/index');
+const router = require('./routes/routes');
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
