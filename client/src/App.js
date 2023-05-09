@@ -6,16 +6,6 @@ import HomePage from "./components/HomePage/HomePage";
 import Top10 from "./components/Top10/Top10";
 
 function App() {
-  // const [data, setData] = React.useState(null);
-
-  // React.useEffect(() => {
-  //   fetch("/api/v1/breeds")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setData(data.message)
-  //       console.log(data)
-  //     });
-  // }, []);
 
   return (
     <div className="App">
